@@ -1,0 +1,221 @@
+body{
+	font-family: 'Dancing Script';	
+	background-color: #02010a;
+}
+
+#contenido{
+		animation-name: sleiden-animacion;
+		animation-duration: 3s;
+}
+
+@media all and (min-width: 900px){
+
+	#contenido{
+		display:block;
+		margin:auto;
+		width: 900px;
+	}
+	footer{
+		display: flex;
+	  	flex-flow: row wrap;
+	}
+	#menu{
+		height: 60px;
+	}
+	#menu > #titulo{
+	width: 80%;
+	float: left;
+	}
+
+	#menu > div{
+		width: 20%;
+		float: right;	
+	}
+
+}
+@media all and (max-width: 900px){
+
+	#contenido{
+		display:block;
+		margin:auto;
+		width: 100%;
+	}
+	footer{
+		display: flex;
+	  	flex-flow: column;
+	}
+	#menu{
+		text-align: center;
+		height: 80px;
+
+	}
+}
+
+
+#menu{
+	background: #5b7989;
+	color: white;
+	text-shadow: 2px 2px #02010A;
+	border-radius: 10px 10px 0px 0px;	
+	width: 100%;
+}
+
+
+#paisaje{
+	background-color: #82c3a6;
+	border: 1px;
+	padding: 20px;
+}
+#paisaje > img{
+	display:block;
+	margin:auto;
+}
+
+
+div [class*="bloque"]{
+  min-height: 200px;
+  flex: 1 2 40%;
+  border: 1px solid #d5c75f;
+  text-align: center;	
+  margin-top: 30px;
+}
+.bloque1 {
+  color: #ddd;
+  order: 1;
+  
+}
+
+.bloque1 img:hover{
+		animation-name: imagen1-animacion;
+		animation-duration: 2s;
+		animation-direction: alternate;
+}
+.bloque2 {
+  color: #333;
+  order: 2;
+}
+.bloque2 img:hover{
+		animation-name: imagen2-animacion;
+		animation-duration: 2s;
+		animation-direction: alternate;
+	
+}
+.contenedor{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #d5c75f;
+
+}
+.contenedor > a:hover { 
+ 	color:black; 
+} 
+.contenedor > div > img{
+	display:block;
+	margin:auto;
+}
+
+@keyframes
+imagen1-animacion {
+	from {
+		transform: rotate(0deg);	
+		box-shadow: 2px 2px 2px	 #82c3a6;
+
+	}
+
+	to {
+		transform: rotate(10deg);
+		box-shadow: 2px 2px 2px	 #82c3a6;
+	
+	}
+}
+
+@keyframes
+imagen2-animacion {
+	from {
+		transform: translate(0px, 0px);
+		box-shadow: 2px 2px 2px	 #82c3a6;
+	}
+	to {
+		transform: translate(20px, -5px);
+		box-shadow: 2px 2px 2px	 #82c3a6;
+	}
+}
+
+@keyframes
+sleiden-animacion {
+	from {
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+	to {
+		margin-top: 0%;
+	}
+}
+
+footer{
+	border-radius: 0 0 10px 10px;
+	background-color: #C6d5c5;
+	
+}
+
+footer > div {
+	width: 215px;
+	margin-left: 10px;
+}
+
+.contenedor-imagenes{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #d5c75f;
+  width: 100%;
+}
+.contenedor-imagenes > div > img{
+	display:block;
+	margin:auto;
+}
+.imagenes-bloque1 {
+  order: 1;
+}
+
+
+div [class*="imagenes-bloque"]{
+  min-height: 250px;
+  flex: 1 2 30%;
+  border: 1px solid #d5c75f;
+  text-align: center;	
+}
+.imagenes-bloque2 {
+  order: 2;
+}
+.imagenes-bloque3 {
+  order: 3;
+}.imagenes-bloque4 {
+  order: 4;
+}.imagenes-bloque5 {
+  order: 5;
+}.imagenes-bloque6 {
+  order: 6;
+}
+
+.gris{
+	filter: grayscale(100%);
+}
+
+.blur{
+	filter: blur(10px);
+}
+
+.sepia {
+	filter: sepia(90%);
+}
+#menu > a{
+	color: white;
+	text-shadow: 2px 2px #02010A;
+
+}
+
+.contenedor > a{
+	color: black;
+}
